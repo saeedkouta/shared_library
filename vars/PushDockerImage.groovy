@@ -7,7 +7,6 @@ def call(String dockerHubCredentialsID, String imageName) {
         }
         
         // Build and push Docker image
-        echo "Building and Pushing Docker image..."
-        sh "docker build -t ${imageName}:${BUILD_NUMBER} ."
+        echo "Pushing Docker image..."
         sh "docker push ${imageName}:${BUILD_NUMBER}"	 
 }
